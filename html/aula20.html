@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meu google maps</title>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> 
+    <script type="text/javascript">
+    function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(-24.728933,-53.758701),
+        zoom: 1000,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    } 
+ 
+    </script>
+
+</head>
+
+
+<body onload="myMap();">
+<h1>MY primeiro google maps </h1>
+<div id="map" style="width:800px; height:800px">
+
+
+</body>
+</html>
