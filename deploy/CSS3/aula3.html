@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">]
+    * {
+    	font-weight: bold; 
+    }
+
+    h1{
+		color:green;    	
+    }
+
+    .meuTituloComClass {
+    	color:blue;
+    }
+
+    #meuElementoComID{
+    	color:yellow;
+    }
+
+    [disabled]{
+        color: grey;
+    }
+
+    [lang|=es]{
+    	color: red;
+    }
+
+    [type='button']{
+    	background-color: green;
+    }
+
+    [type='text']{
+    	background-color: blue;
+    }
+
+    [class*=key]{
+    	color:yellow;
+    }
+
+    a[href^="http://"]{
+    	color: blue;
+    }
+
+    img[src$=".png"]{
+    	transform: rotate(80deg);
+    }
+
+    [type="text"]:active {
+    	background-color: pink;
+    }
+
+    img[src$=".png"]:hover{
+    	transform: rotate(150deg);
+    }
+
+    li:first-child, li:last-child{
+    	color: yellow;
+    }
+
+    p:last-of-type{
+    	font-size: 50px;
+    }
+
+    p.meuTituloComClass{
+    	font-size: 14px;
+    }
+
+
+	</style>
+</head>
+<body>
+
+
+<h1>Titulo selecionado pelo tipo da Tag </h1>
+<h1 id="meutTituloComClass"> Titulo selecionado com Classe</h1>
+<h1 id="meuElementoComID"> Titulo selecionado com ID</h1>
+<h1 disabled>TItulo Selecionado por estar habilitado</h1>
+<h1 lang="es">Titulo selecionado pois esta setado para idioma em espanhol</h1>
+<h1>O Botão selecionado pelo seletor type</h1>
+
+<input type="button" name="botao" value="clique">
+<input type="text" name="botao" value="clique">
+<h1 class="asdfeyasdf"> Selecionado pela Class via Class~='key' </h1>
+<h1 title="Exemple"> Selecionado via conteudo de title</h1>
+<a href="http://www.fulerega.com.br"> Sou um link</a><br>
+<a href="https://www.fulerega.com.br"> Sou um link HTTPS</a><br>
+<img src="">
+</body>
+</html>
