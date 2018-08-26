@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var bola  = "Amarela";
+		function calculaDobro(num) {
+			var dobro = num * 2 ;
+			console.log(dobro);
+		}
+
+		calculaDobro(7);
+
+		function somaNumeros(num1, num2) {
+			return num1 + num2; 
+		}
+
+		var total = somaNumeros(2,5);
+		document.write(total);
+
+		var a = function(num){
+			return num / 2 ;
+		}
+
+		document.write("<br><h1>" + a(10) + "</h1>");
+		var b = (num) => {
+			return num / 2 ;
+		}
+
+		document.write("<br><h1>" + b(100) + "</h1>");
+        
+        function imprimeBola(){
+        	 var carrinho = "verde"; // não ofunga se chamar pra fora
+ 			// carrinho = "verde";
+        	document.write("<br>" + bola);
+        	function imprimePipa(){
+        		document.write("<br>" + carrinho);
+        	}
+        	imprimePipa();
+        }
+
+        imprimeBola();
+        imprimeBola();
+
+ 	
+	</script>
+
+</body>
+</html>
