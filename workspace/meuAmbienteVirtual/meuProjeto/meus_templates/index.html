@@ -1,9 +1,41 @@
-<head>
-    <title>Teste Template do Juan</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %} Seja bem vindo - Pagina Principal {% endblock %}
+
+{% block main %}
+
     <center>
-        <h1>Meu Primeiro Templatee</h1>
-        <h2>{{ minha_variavel }}</h2>
-    </center>
-</body>
+            <h1 class="data">Meu Primeiro Templatee</h1>
+            <h2>{{ minha_variavel }}</h2>
+            <p>IF bloco</p>
+            {% if sexo == 'm' %}
+            <h3>Ola Senhor {{ nome }}  </h3>
+            {% elif sexo == 'f' %}   
+            <h3> Ola Senhora {{ nome }} </h3>
+            {% else %}   
+            <h3> Ola {{ nome }} </h3>
+            {% endif %}   
+
+            <br>
+            <br>
+            <br>
+            <p>Loops </p>
+        <ul> {% for pessoa in lista %}
+        
+                        {% if pessoa.sexo == 'm' %}
+                    <li> <h3>Ola Senhor {{ pessoa.nome }}  </h3> </li>
+                        {% elif pessoa.sexo == 'f' %}   
+                    <li> <h3> Ola Senhora {{ pessoa.nome }} </h3> </li>
+                        {% else %}   
+                    <li> <h3> Ola {{ pessoa.nome }} </h3> </li>
+                        {% endif %}   
+
+            {% endfor %}
+            </ul>
+            <button class="btn btn-main" onclick="AlertaVc()">ON</button>
+            <button class="btn btn-info">OFF</button>
+            
+        </center>
+
+        {% include 'footer.html' %}
+{% endblock %}

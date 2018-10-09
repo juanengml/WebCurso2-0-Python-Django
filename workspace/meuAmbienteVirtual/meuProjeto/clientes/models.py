@@ -22,6 +22,8 @@ class Empregado(models.Model):
     email = models.EmailField()
     cpf = models.OneToOneField(CPF,blank=True,null=True,on_delete=models.CASCADE)
     departamentos = models.ManyToManyField(Departamento,blank=True,null=True)
+    foto =  models.ImageField()
+
     def __str__(self):
         return self.nome  
 
